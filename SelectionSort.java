@@ -1,6 +1,6 @@
 public class SelectionSort {
 
-  public static <T extends Comparable<T>> void Selection(T[] A, int n) {
+  public static <T extends Comparable<T>> void selectionSort(T[] A, int n) {
     for (int i = 0; i < n - 1; i++) {
       int min;
       min = i;
@@ -15,15 +15,6 @@ public class SelectionSort {
         A[min] = temp;
       }
 
-    }
-  }
-
-  public static void main() {
-    Integer X[] = { 10, 2, 4, 7, 8, 1, 3, 5 };
-    int tamanho = X.length;
-    Selection(X, tamanho);
-    for (int i = 0; i < tamanho; i++) {
-      System.out.print(X[i] + "\t");
     }
   }
 }

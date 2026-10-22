@@ -1,7 +1,7 @@
 
 public class BubbleSort {
 
-  public static <T extends Comparable<T>> void BubbleSort(T[] T, int n) {
+  public static <T extends Comparable<T>> void bubbleSort(T[] T, int n) {
     int troca = 1;
     for (int i = 0; i < n; i++) {
       while (troca == 1) {
@@ -15,15 +15,6 @@ public class BubbleSort {
           }
         }
       }
-    }
-  }
-
-  public static void main() {
-    Integer X[] = { 8, 3, 15, 9, -1, 0, 15, -1, -19, 6, 7 };
-    int n = X.length - 1;
-    BubbleSort(X, n);
-    for (int i = 0; i < n; i++) {
-      System.out.print(X[i] + "\t");
     }
   }
 }

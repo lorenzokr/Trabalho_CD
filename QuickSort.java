@@ -20,7 +20,7 @@ public class Sort {
     return i + 1;
   }
 
-  public static void Quicksort(int[] A, int p, int r) {
+  public static void quickSort(int[] A, int p, int r) {
     if (p < r) {
       int q = Particiona(A, p, r);
       Quicksort(A, p, q - 1);
