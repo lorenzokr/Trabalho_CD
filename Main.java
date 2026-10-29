@@ -8,8 +8,8 @@ public class Main {
 
   public static void main(String args[]) {
 
-    int[] entradas = {10, 20, 30, 40, 50};
-    // int[] entradas = {1000, 10000, 100000, 1000000, 10000000};
+    //int[] entradas = {10, 20, 30, 40, 50};
+    int[] entradas = {1000, 10000, 100000, 1000000, 10000000};
 
     System.out.println("\n\n Iniciando execução");
 
@@ -200,12 +200,23 @@ public class Main {
 
               vetorInteger = Arrays.copyOf(vetorOriginal, vetorOriginal.length);
 
-              inicio = System.nanoTime();
-              MergeSort.mergeSort(vetorInteger, 0, vetorInteger.length - 1);
-              fim = System.nanoTime();
+              try {
+                inicio = System.nanoTime();
+                MergeSort.mergeSort(vetorInteger, 0, vetorInteger.length - 1);
+                fim = System.nanoTime();
 
-              arquivo.println(rodada + ",MergeSort," + entrada + "," + nomeOrdem + "," + (fim - inicio) + ",OK");
-              arquivo.flush();
+                arquivo.println(rodada + ",MergeSort," + entrada + "," + nomeOrdem + "," + (fim - inicio) + ",OK");
+                arquivo.flush();
+              }
+              catch (StackOverflowError e) {
+                System.out.println("Stack overflow: o QuickSort excedeu a pilha.");
+                arquivo.println(rodada + ",MergeSort," + entrada + "," + nomeOrdem + ",-1,STACK_OVERFLOW");
+                arquivo.flush();
+              }
+
+
+
+
 
               System.out.println("MergeSort: " + (fim - inicio) + " ns");
 
@@ -229,12 +240,19 @@ public class Main {
 
               vetorInteger = Arrays.copyOf(vetorOriginal, vetorOriginal.length);
 
-              inicio = System.nanoTime();
-              QuickSort.quickSort(vetorInteger, 0, vetorInteger.length - 1);
-              fim = System.nanoTime();
+              try {
+                inicio = System.nanoTime();
+                QuickSort.quickSort(vetorInteger, 0, vetorInteger.length - 1);
+                fim = System.nanoTime();
+                arquivo.println(rodada + ",QuickSort," + entrada + "," + nomeOrdem + "," + (fim - inicio) + ",OK");
+                arquivo.flush();
+              }
+              catch (StackOverflowError e) {
+                System.out.println("Stack overflow: o QuickSort excedeu a pilha.");
+                arquivo.println(rodada + ",QuickSort," + entrada + "," + nomeOrdem + ",-1,STACK_OVERFLOW");
+                arquivo.flush();
+              }
 
-              arquivo.println(rodada + ",QuickSort," + entrada + "," + nomeOrdem + "," + (fim - inicio) + ",OK");
-              arquivo.flush();
 
               System.out.println("QuickSort: " + (fim - inicio) + " ns");
 
