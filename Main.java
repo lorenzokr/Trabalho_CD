@@ -2,347 +2,540 @@ import java.util.Random;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 
 public class Main {
 
-  public static <T extends Comparable<T>> void main(String args[]) {
-
-//    int[] entradas = {10, 20, 30, 40, 50};
-    int[] entradas = {1000, 10000, 100000, 1000000, 10000000};
-
-    System.out.println("\n\n Iniciando execução");
-
-    try (PrintWriter arquivo = new PrintWriter(new FileWriter("resultados.csv"))) {
-      arquivo.println("Algoritmo,Tamanho,Tempo_ns");
-
-
-      // -=-=-=-=-=-=-=-=- BUBBLE SORT -=-=-=-=-=-=-=-=-=-
-
-
-      System.out.println("\n\n BubbleSort");
-
-      //Carregando algoritmos na cache
-      long inicio = System.nanoTime();
-      Integer[] vetorInteger = new Integer[1];
-      vetorInteger = gerarVetorComparable(1);
-      BubbleSort.bubbleSort(vetorInteger, 1);
-      long fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparable(entrada);
-        inicio = System.nanoTime();
-        BubbleSort.bubbleSort(vetorInteger, vetorInteger.length);
-        fim = System.nanoTime();
-        arquivo.println("BubbleSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("BubbleSort,"+entrada+",NaN");
-          System.out.println("\n Bubble sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do bubble encerrada");
-
-
-      // -=-=-=-=-=-=-=-=- BUCKET SORT -=-=-=-=-=-=-=-=-=-
-
-
-      System.out.println("\n\n BucketSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      double[] vetorDouble = new double[1];
-      vetorDouble = gerarVetorDouble(1);
-      BucketSort.bucketSort(vetorDouble, 1);
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorDouble = new double[entrada];
-        vetorDouble = gerarVetorDouble(entrada);
-        inicio = System.nanoTime();
-        BucketSort.bucketSort(vetorDouble, vetorDouble.length);
-        fim = System.nanoTime();
-        arquivo.println("BucketSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("BucketSort,"+entrada+",NaN");
-          System.out.println("\n Bucket sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do bucket encerrada");
-
-
-      // -=-=-=-=-=-=-=-=- COUNTING SORT -=-=-=-=-=-=-=-=-=-
-
-
-      System.out.println("\n\n CountingSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      vetorInteger = new Integer[1];
-      vetorInteger = gerarVetorComparableCounting(1);
-      CountingSort.countingSort(vetorInteger, 1);
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparableCounting(entrada);
-        inicio = System.nanoTime();
-        CountingSort.countingSort(vetorInteger, vetorInteger.length);
-        fim = System.nanoTime();
-        arquivo.println("CountingSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("CountingSort,"+entrada+",NaN");
-          System.out.println("\n Counting sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do counting encerrada");
-
-
-
-
-      System.out.println("\n\n HeapSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      vetorInteger = new Integer[1];
-      vetorInteger = gerarVetorComparable(1);
-      HeapSort.heapSort(vetorInteger, 1);
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparable(entrada);
-        inicio = System.nanoTime();
-        HeapSort.heapSort(vetorInteger, vetorInteger.length);
-        fim = System.nanoTime();
-        arquivo.println("HeapSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("HeapSort,"+entrada+",NaN");
-          System.out.println("\n Heap sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do heap encerrada");
-
-
-
-
-      System.out.println("\n\n InsertionSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      vetorInteger = new Integer[1];
-      vetorInteger = gerarVetorComparable(1);
-      InsertionSort.insertionSort(vetorInteger, 1);
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparable(entrada);
-        inicio = System.nanoTime();
-        InsertionSort.insertionSort(vetorInteger, vetorInteger.length);
-        fim = System.nanoTime();
-        arquivo.println("InsertionSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("InsertionSort,"+entrada+",NaN");
-          System.out.println("\n Insertion sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do insertion encerrada");
-
-
-
-
-      System.out.println("\n\n MergeSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      vetorInteger = new Integer[10];
-      vetorInteger = gerarVetorComparable(10);
-      MergeSort.mergeSort(vetorInteger, 0, (vetorInteger.length-1));
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparable(entrada);
-        inicio = System.nanoTime();
-        MergeSort.mergeSort(vetorInteger, 0, (vetorInteger.length-1));
-        fim = System.nanoTime();
-        arquivo.println("MergeSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("MergeSort,"+entrada+",NaN");
-          System.out.println("\n Merge sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do merge encerrada");
-
-
-
-
-      System.out.println("\n\n QuickSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      vetorInteger = new Integer[1];
-      vetorInteger = gerarVetorComparable(1);
-      QuickSort.quickSort(vetorInteger, 0, 0);
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparable(entrada);
-        inicio = System.nanoTime();
-        QuickSort.quickSort(vetorInteger, 0, (vetorInteger.length-1));
-        fim = System.nanoTime();
-        arquivo.println("QuickSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("QuickSort,"+entrada+",NaN");
-          System.out.println("\n Quick sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do quick encerrada");
-
-
-
-
-      System.out.println("\n\n RadixSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      vetorInteger = new Integer[1];
-      vetorInteger = gerarVetorComparableRadix(1);
-      RadixSort.radixSort(vetorInteger, 1);
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparableCounting(entrada);
-        inicio = System.nanoTime();
-        RadixSort.radixSort(vetorInteger, vetorInteger.length);
-        fim = System.nanoTime();
-        arquivo.println("RadixSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("RadixSort,"+entrada+",NaN");
-          System.out.println("\n Radix sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do radix encerrada");
-
-
-
-
-      System.out.println("\n\n SelectionSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      vetorInteger = new Integer[1];
-      vetorInteger = gerarVetorComparable(1);
-      SelectionSort.selectionSort(vetorInteger, 1);
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparable(entrada);
-        inicio = System.nanoTime();
-        SelectionSort.selectionSort(vetorInteger, vetorInteger.length);
-        fim = System.nanoTime();
-        arquivo.println("SelectionSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("SelectionSort,"+entrada+",NaN");
-          System.out.println("\n Selection sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do selection encerrada");
-
-
-
-
-      System.out.println("\n\n ShellSort");
-
-      //Carregando algoritmos na cache
-      inicio = System.nanoTime();
-      vetorInteger = new Integer[1];
-      vetorInteger = gerarVetorComparable(1);
-      ShellSort.shellSort(vetorInteger, 1);
-      fim = System.nanoTime();
-
-      for(int entrada : entradas) {
-
-        try {
-        System.out.println("\nEntrada "+entrada);
-        vetorInteger = new Integer[entrada];
-        vetorInteger = gerarVetorComparable(entrada);
-        inicio = System.nanoTime();
-        ShellSort.shellSort(vetorInteger, vetorInteger.length);
-        fim = System.nanoTime();
-        arquivo.println("ShellSort,"+entrada+","+(fim-inicio));
-        }
-
-        catch (OutOfMemoryError e) {
-          arquivo.println("ShellSort,"+entrada+",NaN");
-          System.out.println("\n Shell sort: Memória insuficiente para entrada "+entrada);
-          break;
-        }
-      }
-      System.out.println("\n\n Execução do shell encerrada");
+    private static final int RODADAS = 10;
+
+    private static final String[] ALGORITMOS_COMPARAVEIS = {
+        "BubbleSort",
+        "HeapSort",
+        "InsertionSort",
+        "MergeSort",
+        "QuickSort",
+        "SelectionSort",
+        "ShellSort"
+    };
+
+    @FunctionalInterface
+    private interface OrdenadorComparable {
+        void ordenar(Integer[] vetor);
     }
 
-    catch (IOException e) {
-      System.out.println("Erro ao escrever o arquivo: " + e.getMessage());
+    @FunctionalInterface
+    private interface OrdenadorInteiro {
+        void ordenar(int[] vetor);
     }
-  }
+
+    @FunctionalInterface
+    private interface OrdenadorDouble {
+        void ordenar(double[] vetor);
+    }
+
+    public static void main(String[] args) {
+
+        // Entradas pequenas para testar antes da execução completa.
+        int[] entradas = {10, 20, 30, 40, 50};
+
+        // Entradas para o experimento completo.
+        // int[] entradas = {1000, 10000, 100000, 1000000, 10000000};
+
+        System.out.println("\n\nIniciando execução");
+
+        try (PrintWriter arquivo =
+                new PrintWriter(new FileWriter("resultados.csv"))) {
+
+            arquivo.println(
+                "Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status"
+            );
+            arquivo.flush();
+
+            // -=-=-=-=-=-=-=-=- AQUECEDORES DE CACHE -=-=-=-=-=-=-=-=-=-
+
+
+            System.out.println("\nAquecendo os algoritmos");
+
+            Integer[] vetorInteger = gerarVetorComparable(1, 0);
+            int[] vetorInteiro = gerarVetorInteiro(1, 0);
+            int[] vetorCounting = gerarVetorInteiroCounting(1, 0);
+            double[] vetorDouble = gerarVetorDouble(1, 0);
+
+            BubbleSort.bubbleSort(Arrays.copyOf(vetorInteger, 1), 1);
+            System.out.println("BubbleSort aquecido");
+
+            BucketSort.bucketSort(Arrays.copyOf(vetorDouble, 1), 1);
+            System.out.println("BucketSort aquecido");
+
+            CountingSort.countingSort(Arrays.copyOf(vetorCounting, 1), 1);
+            System.out.println("CountingSort aquecido");
+
+            HeapSort.heapSort(Arrays.copyOf(vetorInteger, 1), 1);
+            System.out.println("HeapSort aquecido");
+
+            InsertionSort.insertionSort(Arrays.copyOf(vetorInteger, 1), 1);
+            System.out.println("InsertionSort aquecido");
+
+            MergeSort.mergeSort(
+                Arrays.copyOf(vetorInteger, 1), 0, 0
+            );
+            System.out.println("MergeSort aquecido");
+
+            QuickSort.quickSort(
+                Arrays.copyOf(vetorInteger, 1), 0, 0
+            );
+            System.out.println("QuickSort aquecido");
+
+            RadixSort.radixSort(Arrays.copyOf(vetorInteiro, 1), 1);
+            System.out.println("RadixSort aquecido");
+
+            SelectionSort.selectionSort(
+                Arrays.copyOf(vetorInteger, 1), 1
+            );
+            System.out.println("SelectionSort aquecido");
+
+            ShellSort.shellSort(Arrays.copyOf(vetorInteger, 1), 1);
+            System.out.println("ShellSort aquecido");
+
+
+            // -=-=-=-=-=-=-=-=- EXPERIMENTO -=-=-=-=-=-=-=-=-=-
+
+
+            for (int rodada = 1; rodada <= RODADAS; rodada++) {
+
+                System.out.println(
+                    "\n\n========== RODADA " + rodada
+                    + " DE " + RODADAS + " =========="
+                );
+
+                for (int entrada : entradas) {
+
+                    System.out.println(
+                        "\n\nTamanho: " + entrada
+                    );
+
+                    // Todos os tamanhos recebem vetores aleatórios.
+                    executarConfiguracao(
+                        arquivo, rodada, entrada, "Aleatorio", 0
+                    );
+
+                    // Os vetores ordenados são testados apenas
+                    // para um milhão de elementos.
+                    if (entrada == 1000000) {
+
+                        executarConfiguracao(
+                            arquivo, rodada, entrada, "Crescente", 1
+                        );
+
+                        executarConfiguracao(
+                            arquivo, rodada, entrada, "Decrescente", 2
+                        );
+                    }
+                }
+            }
+
+            System.out.println("\n\nExperimento encerrado.");
+
+        } catch (IOException e) {
+            System.out.println(
+                "Erro ao escrever o arquivo: " + e.getMessage()
+            );
+        }
+    }
+
+
+    private static void executarConfiguracao(
+            PrintWriter arquivo,
+            int rodada,
+            int tamanho,
+            String ordem,
+            int tipoOrdem) {
+
+        System.out.println(
+            "\n--- " + ordem + " | Tamanho: " + tamanho
+            + " | Rodada: " + rodada + " ---"
+        );
+
+        executarComparacoes(
+            arquivo, rodada, tamanho, ordem, tipoOrdem
+        );
+
+        executarCounting(
+            arquivo, rodada, tamanho, ordem, tipoOrdem
+        );
+
+        executarRadix(
+            arquivo, rodada, tamanho, ordem, tipoOrdem
+        );
+
+        executarBucket(
+            arquivo, rodada, tamanho, ordem, tipoOrdem
+        );
+    }
+
+
+    // -=-=-=-=-=-=-=-=- ALGORITMOS COMPARÁVEIS -=-=-=-=-=-=-=-=-=-
+
+
+    private static void executarComparacoes(
+            PrintWriter arquivo,
+            int rodada,
+            int tamanho,
+            String ordem,
+            int tipoOrdem) {
+
+        Integer[] original;
+
+        try {
+            original = gerarVetorComparable(tamanho, tipoOrdem);
+        } catch (OutOfMemoryError e) {
+            System.out.println(
+                "Memória insuficiente para gerar Integer[] de "
+                + tamanho + " elementos."
+            );
+
+            for (String algoritmo : ALGORITMOS_COMPARAVEIS) {
+                registrarFalha(
+                    arquivo, rodada, algoritmo, tamanho, ordem
+                );
+            }
+
+            System.gc();
+            return;
+        }
+
+        medirComparable(
+            arquivo, rodada, "BubbleSort", tamanho, ordem,
+            original,
+            vetor -> BubbleSort.bubbleSort(vetor, vetor.length)
+        );
+
+        medirComparable(
+            arquivo, rodada, "HeapSort", tamanho, ordem,
+            original,
+            vetor -> HeapSort.heapSort(vetor, vetor.length)
+        );
+
+        medirComparable(
+            arquivo, rodada, "InsertionSort", tamanho, ordem,
+            original,
+            vetor -> InsertionSort.insertionSort(vetor, vetor.length)
+        );
+
+        medirComparable(
+            arquivo, rodada, "MergeSort", tamanho, ordem,
+            original,
+            vetor -> MergeSort.mergeSort(
+                vetor, 0, vetor.length - 1
+            )
+        );
+
+        medirComparable(
+            arquivo, rodada, "QuickSort", tamanho, ordem,
+            original,
+            vetor -> QuickSort.quickSort(
+                vetor, 0, vetor.length - 1
+            )
+        );
+
+        medirComparable(
+            arquivo, rodada, "SelectionSort", tamanho, ordem,
+            original,
+            vetor -> SelectionSort.selectionSort(vetor, vetor.length)
+        );
+
+        medirComparable(
+            arquivo, rodada, "ShellSort", tamanho, ordem,
+            original,
+            vetor -> ShellSort.shellSort(vetor, vetor.length)
+        );
+    }
+
+
+    private static void medirComparable(
+            PrintWriter arquivo,
+            int rodada,
+            String algoritmo,
+            int tamanho,
+            String ordem,
+            Integer[] original,
+            OrdenadorComparable ordenador) {
+
+        try {
+            // A cópia é criada antes da medição.
+            Integer[] copia = Arrays.copyOf(
+                original, original.length
+            );
+
+            long inicio = System.nanoTime();
+
+            ordenador.ordenar(copia);
+
+            long fim = System.nanoTime();
+
+            registrarResultado(
+                arquivo, rodada, algoritmo, tamanho, ordem,
+                fim - inicio, "OK"
+            );
+
+        } catch (OutOfMemoryError e) {
+            System.out.println(
+                algoritmo + ": memória insuficiente para "
+                + tamanho + " elementos."
+            );
+
+            registrarFalha(
+                arquivo, rodada, algoritmo, tamanho, ordem
+            );
+
+            System.gc();
+        }
+    }
+
+
+    // -=-=-=-=-=-=-=-=- COUNTING SORT -=-=-=-=-=-=-=-=-=-
+
+
+    private static void executarCounting(
+            PrintWriter arquivo,
+            int rodada,
+            int tamanho,
+            String ordem,
+            int tipoOrdem) {
+
+        int[] original;
+
+        try {
+            original = gerarVetorInteiroCounting(
+                tamanho, tipoOrdem
+            );
+        } catch (OutOfMemoryError e) {
+            System.out.println(
+                "CountingSort: memória insuficiente para gerar "
+                + tamanho + " elementos."
+            );
+
+            registrarFalha(
+                arquivo, rodada, "CountingSort",
+                tamanho, ordem
+            );
+
+            System.gc();
+            return;
+        }
+
+        medirInteiro(
+            arquivo, rodada, "CountingSort", tamanho, ordem,
+            original,
+            vetor -> CountingSort.countingSort(vetor, vetor.length)
+        );
+    }
+
+
+    // -=-=-=-=-=-=-=-=- RADIX SORT -=-=-=-=-=-=-=-=-=-
+
+
+    private static void executarRadix(
+            PrintWriter arquivo,
+            int rodada,
+            int tamanho,
+            String ordem,
+            int tipoOrdem) {
+
+        int[] original;
+
+        try {
+            original = gerarVetorInteiro(tamanho, tipoOrdem);
+        } catch (OutOfMemoryError e) {
+            System.out.println(
+                "RadixSort: memória insuficiente para gerar "
+                + tamanho + " elementos."
+            );
+
+            registrarFalha(
+                arquivo, rodada, "RadixSort", tamanho, ordem
+            );
+
+            System.gc();
+            return;
+        }
+
+        medirInteiro(
+            arquivo, rodada, "RadixSort", tamanho, ordem,
+            original,
+            vetor -> RadixSort.radixSort(vetor, vetor.length)
+        );
+    }
+
+
+    private static void medirInteiro(
+            PrintWriter arquivo,
+            int rodada,
+            String algoritmo,
+            int tamanho,
+            String ordem,
+            int[] original,
+            OrdenadorInteiro ordenador) {
+
+        try {
+            // A cópia é criada antes da medição.
+            int[] copia = Arrays.copyOf(
+                original, original.length
+            );
+
+            long inicio = System.nanoTime();
+
+            ordenador.ordenar(copia);
+
+            long fim = System.nanoTime();
+
+            registrarResultado(
+                arquivo, rodada, algoritmo, tamanho, ordem,
+                fim - inicio, "OK"
+            );
+
+        } catch (OutOfMemoryError e) {
+            System.out.println(
+                algoritmo + ": memória insuficiente para "
+                + tamanho + " elementos."
+            );
+
+            registrarFalha(
+                arquivo, rodada, algoritmo, tamanho, ordem
+            );
+
+            System.gc();
+        }
+    }
+
+
+    // -=-=-=-=-=-=-=-=- BUCKET SORT -=-=-=-=-=-=-=-=-=-
+
+
+    private static void executarBucket(
+            PrintWriter arquivo,
+            int rodada,
+            int tamanho,
+            String ordem,
+            int tipoOrdem) {
+
+        double[] original;
+
+        try {
+            original = gerarVetorDouble(tamanho, tipoOrdem);
+        } catch (OutOfMemoryError e) {
+            System.out.println(
+                "BucketSort: memória insuficiente para gerar "
+                + tamanho + " elementos."
+            );
+
+            registrarFalha(
+                arquivo, rodada, "BucketSort", tamanho, ordem
+            );
+
+            System.gc();
+            return;
+        }
+
+        medirDouble(
+            arquivo, rodada, "BucketSort", tamanho, ordem,
+            original,
+            vetor -> BucketSort.bucketSort(vetor, vetor.length)
+        );
+    }
+
+
+    private static void medirDouble(
+            PrintWriter arquivo,
+            int rodada,
+            String algoritmo,
+            int tamanho,
+            String ordem,
+            double[] original,
+            OrdenadorDouble ordenador) {
+
+        try {
+            // A cópia é criada antes da medição.
+            double[] copia = Arrays.copyOf(
+                original, original.length
+            );
+
+            long inicio = System.nanoTime();
+
+            ordenador.ordenar(copia);
+
+            long fim = System.nanoTime();
+
+            registrarResultado(
+                arquivo, rodada, algoritmo, tamanho, ordem,
+                fim - inicio, "OK"
+            );
+
+        } catch (OutOfMemoryError e) {
+            System.out.println(
+                algoritmo + ": memória insuficiente para "
+                + tamanho + " elementos."
+            );
+
+            registrarFalha(
+                arquivo, rodada, algoritmo, tamanho, ordem
+            );
+
+            System.gc();
+        }
+    }
+
+
+    // -=-=-=-=-=-=-=-=- REGISTRO DOS RESULTADOS -=-=-=-=-=-=-=-=-=-
+
+
+    private static void registrarResultado(
+            PrintWriter arquivo,
+            int rodada,
+            String algoritmo,
+            int tamanho,
+            String ordem,
+            long tempo,
+            String status) {
+
+        arquivo.println(
+            rodada + ","
+            + algoritmo + ","
+            + tamanho + ","
+            + ordem + ","
+            + tempo + ","
+            + status
+        );
+
+        // Envia o resultado ao arquivo imediatamente.
+        arquivo.flush();
+
+        System.out.println(
+            algoritmo + " | " + ordem
+            + " | " + tamanho
+            + " elementos | " + tempo
+            + " ns | " + status
+        );
+    }
+
+
+    private static void registrarFalha(
+            PrintWriter arquivo,
+            int rodada,
+            String algoritmo,
+            int tamanho,
+            String ordem) {
+
+        registrarResultado(
+            arquivo, rodada, algoritmo, tamanho,
+            ordem, -1, "OUT_OF_MEMORY"
+        );
+    }
+
+
+    // -=-=-=-=-=-=-=-=- TESTES COMENTADOS -=-=-=-=-=-=-=-=-=-
+
+
     /* testes
 
     Integer X[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
@@ -437,7 +630,7 @@ public class Main {
     }
 
 
-    double[] XXXXXXXXXX = gerarVetorDouble(20);
+    double[] XXXXXXXXXX = gerarVetorDouble(20, 0);
     tamanho = XXXXXXXXXX.length;
 
     BucketSort.bucketSort(XXXXXXXXXX, tamanho);
@@ -446,69 +639,110 @@ public class Main {
     for (int i = 0; i < tamanho; i++) {
       System.out.println(XXXXXXXXXX[i]);
     }
-  }*/
+
+    */
 
 
+    // -=-=-=-=-=-=-=-=- GERADORES DE VETORES -=-=-=-=-=-=-=-=-=-
 
 
+    private static Integer[] gerarVetorComparable(
+            int n, int ordem) {
 
+        Random gerador = new Random();
 
-  private static <T extends Comparable<T>> Integer[] gerarVetorComparable(int n) {
+        Integer[] vetor = new Integer[n];
 
-    Random gerador = new Random();
+        if (ordem == 0) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = gerador.nextInt();
+            }
+        } else if (ordem == 1) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = i;
+            }
+        } else if (ordem == 2) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = n - 1 - i;
+            }
+        }
 
-    Integer[] vetor = new Integer[n];
-    for (int i=0; i<n; i++) {
-      vetor[i] = (Integer)gerador.nextInt();
+        return vetor;
     }
 
-    return vetor;
-  }
 
-  private static int[] gerarVetorInteiro(int n) {
+    private static int[] gerarVetorInteiro(
+            int n, int ordem) {
 
-    Random gerador = new Random();
+        Random gerador = new Random();
 
-    int[] vetor = new int[n];
-    for (int i=0; i<n; i++) {
-      vetor[i] = gerador.nextInt(Integer.MAX_VALUE);
+        int[] vetor = new int[n];
+
+        if (ordem == 0) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = gerador.nextInt(Integer.MAX_VALUE);
+            }
+        } else if (ordem == 1) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = i;
+            }
+        } else if (ordem == 2) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = n - 1 - i;
+            }
+        }
+
+        return vetor;
     }
 
-    return vetor;
-  }
 
-  private static <T extends Comparable<T>> Integer[] gerarVetorComparableCounting(int n) {
+    private static int[] gerarVetorInteiroCounting(
+            int n, int ordem) {
 
-    Random gerador = new Random();
+        Random gerador = new Random();
 
-    Integer[] vetor = new Integer[n];
-    for (int i=0; i<n; i++) {
-      vetor[i] = (Integer)gerador.nextInt(1000);
+        int[] vetor = new int[n];
+
+        if (ordem == 0) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = gerador.nextInt(1000);
+            }
+        } else if (ordem == 1) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = (int) ((long) i * 10000 / n);
+            }
+        } else if (ordem == 2) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = (int) ((long) (n - 1 - i) * 10000 / n);
+            }
+        }
+
+        return vetor;
     }
 
-    return vetor;
-  }
 
-  private static <T extends Comparable<T>> Integer[] gerarVetorComparableRadix(int n) {
+    private static double[] gerarVetorDouble(
+            int n, int ordem) {
 
-    Random gerador = new Random();
+        Random gerador = new Random();
 
-    Integer[] vetor = new Integer[n];
-    for (int i=0; i<n; i++) {
-      vetor[i] = (Integer)gerador.nextInt();
+        double[] vetor = new double[n];
+
+        if (ordem == 0) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = gerador.nextDouble();
+            }
+        } else if (ordem == 1) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = (double) i / n;
+            }
+        } else if (ordem == 2) {
+            for (int i = 0; i < n; i++) {
+                vetor[i] = (double) (n - 1 - i) / n;
+            }
+        }
+
+        return vetor;
     }
 
-    return vetor;
-  }
-
-  private static double[] gerarVetorDouble(int n) {
-
-    Random gerador = new Random();
-
-    double[] vetor = new double[n];
-    for (int i=0; i<n; i++) {
-      vetor[i] = gerador.nextDouble();
-    }
-    return vetor;
-  }
 }

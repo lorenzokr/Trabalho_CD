@@ -2,14 +2,9 @@
 
 public class CountingSort {
 
-    public static void countingSort(Integer[] A, int n) {
+    public static void countingSort(int[] A, int n) {
 
-        int[] A2 = new int[n];
-        for (int i=0; i<n; i++) {
-            A2[i] = A[i];
-        }
-        int k = getMax(A2, n);
-
+        int k = getMax(A, n);
         int[] B = new int[n];
         int[] C = new int[k+1];
 
@@ -20,7 +15,7 @@ public class CountingSort {
 
         //conta quantidade de vezes que cada valor aparece
         for (int i=0; i<n; i++) {
-            C[A2[i]] = C[A2[i]] + 1;
+            C[A[i]] = C[A[i]] + 1;
         }
         // acumula posições
         for (int i=1; i<=k; i++) {
@@ -28,8 +23,8 @@ public class CountingSort {
         }
         // copia de volta ordenado
         for (int i=n-1; i>=0; i--) {
-            B[C[A2[i]]-1] = A2[i];
-            C[A2[i]] = C[A2[i]] - 1;
+            B[C[A[i]]-1] = A[i];
+            C[A[i]] = C[A[i]] - 1;
         }
 
         for (int i=0; i<n; i++) {
