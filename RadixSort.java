@@ -1,9 +1,16 @@
 public class RadixSort {
 
-  public static void radixSort(int[] A, int n) {
+  public static void radixSort(Integer[] T, int n) {
+    int[] A = new int[n];
+    for (int i=0; i<n; i++) {
+      A[i] = (int) T[i];
+    }
     int max = CountingSort.getMax(A, n);
     for (int exp = 1; max / exp > 0; exp *= 10) {
       countingSortDigito(A, n, exp);
+    }
+    for (int i=0; i<n; i++) {
+      T[i] = (Integer) A[i];
     }
   }
 

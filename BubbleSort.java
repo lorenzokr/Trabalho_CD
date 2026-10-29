@@ -6,7 +6,7 @@ public class BubbleSort {
     for (int i = 0; i < n; i++) {
       while (troca == 1) {
         troca = 0;
-        for (int j = n; j > i; j--) {
+        for (int j = n-1; j > i; j--) {
           if (T[j].compareTo(T[j - 1]) == -1) {
             troca = 1;
             T temp = T[j];

@@ -6,13 +6,14 @@ public class MergeSort {
       T[] A, int p, int q, int r) {
     int nLeft = q - p + 1;
     int nRight = r - q;
+
     T[] L = java.util.Arrays.copyOfRange(A, p, q + 1);
     T[] R = java.util.Arrays.copyOfRange(A, q + 1, r + 1);
 
     int i = 0;
     int j = 0;
     int k = p;
-    while (i < nLeft && j < nRight) {
+    while (i < nLeft-1 && j < nRight-1) {
       if (L[i].compareTo(R[j]) <= 0) {
         A[k] = L[i];
         i++;
