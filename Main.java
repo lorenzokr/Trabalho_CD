@@ -9,7 +9,7 @@ public class Main {
   public static void main(String args[]) {
 
     //int[] entradas = {10, 20, 30, 40, 50};
-    int[] entradas = {1000, 10000, 100000, 1000000, 10000000};
+    int[] entradas = {1000, 10000, 100000, 1000000};
 
     System.out.println("\n\n Iniciando execução");
 
@@ -207,6 +207,7 @@ public class Main {
 
                 arquivo.println(rodada + ",MergeSort," + entrada + "," + nomeOrdem + "," + (fim - inicio) + ",OK");
                 arquivo.flush();
+                System.out.println("MergeSort: " + (fim - inicio) + " ns");
               }
               catch (StackOverflowError e) {
                 System.out.println("Stack overflow: o QuickSort excedeu a pilha.");
@@ -214,11 +215,6 @@ public class Main {
                 arquivo.flush();
               }
 
-
-
-
-
-              System.out.println("MergeSort: " + (fim - inicio) + " ns");
 
             }
 
@@ -246,6 +242,7 @@ public class Main {
                 fim = System.nanoTime();
                 arquivo.println(rodada + ",QuickSort," + entrada + "," + nomeOrdem + "," + (fim - inicio) + ",OK");
                 arquivo.flush();
+                System.out.println("QuickSort: " + (fim - inicio) + " ns");
               }
               catch (StackOverflowError e) {
                 System.out.println("Stack overflow: o QuickSort excedeu a pilha.");
@@ -253,8 +250,6 @@ public class Main {
                 arquivo.flush();
               }
 
-
-              System.out.println("QuickSort: " + (fim - inicio) + " ns");
 
             }
 
