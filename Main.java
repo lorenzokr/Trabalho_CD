@@ -404,119 +404,119 @@ public class Main {
 
   }
 
-  /*
-   * testes
-   * 
-   * Integer X[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
-   * 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * 
-   * Integer XX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
-   * 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * int tamanho = XX.length;
-   * 
-   * QuickSort.quickSort(XX, 0, tamanho - 1);
-   * System.out.println("\n\nQuickSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XX[i]);
-   * }
-   * 
-   * 
-   * Integer XXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
-   * 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * tamanho = XXX.length;
-   * 
-   * BubbleSort.bubbleSort(XXX, tamanho);
-   * System.out.println("\n\nBubbleSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XXX[i]);
-   * }
-   * 
-   * 
-   * int XXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65, 12,
-   * 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * tamanho = XXXX.length;
-   * 
-   * CountingSort.countingSort(XXXX, tamanho);
-   * System.out.println("\n\nCountingSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XXXX[i]);
-   * }
-   * 
-   * 
-   * int XXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
-   * 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * tamanho = XXXXX.length;
-   * 
-   * RadixSort.radixSort(XXXXX, tamanho);
-   * System.out.println("\n\nRadixSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XXXXX[i]);
-   * }
-   * 
-   * 
-   * Integer XXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
-   * 65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * tamanho = XXXXXX.length;
-   * 
-   * HeapSort.heapSort(XXXXXX, tamanho);
-   * System.out.println("\n\nHeapSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XXXXXX[i]);
-   * }
-   * 
-   * 
-   * Integer XXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
-   * 65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * tamanho = XXXXXXX.length;
-   * 
-   * InsertionSort.insertionSort(XXXXXXX, tamanho);
-   * System.out.println("\n\nInsertionSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XXXXXXX[i]);
-   * }
-   * 
-   * 
-   * Integer XXXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
-   * 65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * tamanho = XXXXXXXX.length;
-   * 
-   * SelectionSort.selectionSort(XXXXXXXX, tamanho);
-   * System.out.println("\n\nSelectionSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XXXXXXXX[i]);
-   * }
-   * 
-   * 
-   * Integer XXXXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87,
-   * 12, 65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-   * tamanho = XXXXXXXXX.length;
-   * 
-   * ShellSort.shellSort(XXXXXXXXX, tamanho);
-   * System.out.println("\n\nShellSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XXXXXXXXX[i]);
-   * }
-   * 
-   * 
-   * double[] XXXXXXXXXX = gerarVetorDouble(20, 0);
-   * tamanho = XXXXXXXXXX.length;
-   * 
-   * BucketSort.bucketSort(XXXXXXXXXX, tamanho);
-   * System.out.println("\n\nBucketSort");
-   * 
-   * for (int i = 0; i < tamanho; i++) {
-   * System.out.println(XXXXXXXXXX[i]);
-   * }
-   * 
-   * }
+/*
+    testes
+
+    Integer X[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
+    12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+
+    Integer XX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
+    12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+    int tamanho = XX.length;
+
+    QuickSort.quickSort(XX, 0, tamanho - 1);
+    System.out.println("\n\nQuickSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XX[i]);
+    }
+
+
+    Integer XXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
+    12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+    tamanho = XXX.length;
+
+    BubbleSort.bubbleSort(XXX, tamanho);
+    System.out.println("\n\nBubbleSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XXX[i]);
+    }
+
+
+    int XXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65, 12,
+    89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+    tamanho = XXXX.length;
+
+    CountingSort.countingSort(XXXX, tamanho);
+    System.out.println("\n\nCountingSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XXXX[i]);
+    }
+
+
+    int XXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
+    12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+    tamanho = XXXXX.length;
+
+    RadixSort.radixSort(XXXXX, tamanho);
+    System.out.println("\n\nRadixSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XXXXX[i]);
+    }
+
+
+    Integer XXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
+    65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+    tamanho = XXXXXX.length;
+
+    HeapSort.heapSort(XXXXXX, tamanho);
+    System.out.println("\n\nHeapSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XXXXXX[i]);
+    }
+
+
+    Integer XXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
+    65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+    tamanho = XXXXXXX.length;
+
+    InsertionSort.insertionSort(XXXXXXX, tamanho);
+    System.out.println("\n\nInsertionSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XXXXXXX[i]);
+    }
+
+
+    Integer XXXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
+    65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+    tamanho = XXXXXXXX.length;
+
+    SelectionSort.selectionSort(XXXXXXXX, tamanho);
+    System.out.println("\n\nSelectionSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XXXXXXXX[i]);
+    }
+
+
+    Integer XXXXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87,
+    12, 65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
+    tamanho = XXXXXXXXX.length;
+
+    ShellSort.shellSort(XXXXXXXXX, tamanho);
+    System.out.println("\n\nShellSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XXXXXXXXX[i]);
+    }
+
+
+    double[] XXXXXXXXXX = gerarVetorDouble(20, 0);
+    tamanho = XXXXXXXXXX.length;
+
+    BucketSort.bucketSort(XXXXXXXXXX, tamanho);
+    System.out.println("\n\nBucketSort");
+
+    for (int i = 0; i < tamanho; i++) {
+    System.out.println(XXXXXXXXXX[i]);
+    }
+
+    }
    */
 
   private static Integer[] gerarVetorComparable(int n, int ordem) {
@@ -604,7 +604,7 @@ public class Main {
     else if (ordem == 1) {
 
       for (int i = 0; i < n; i++) {
-        vetor[i] = (int) ((long) i * 10000 / n);
+        vetor[i] = (int) ((long) i  10000 / n);
       }
 
     }
@@ -612,7 +612,7 @@ public class Main {
     else if (ordem == 2) {
 
       for (int i = 0; i < n; i++) {
-        vetor[i] = (int) ((long) (n - 1 - i) * 10000 / n);
+        vetor[i] = (int) ((long) (n - 1 - i)  10000 / n);
       }
 
     }
