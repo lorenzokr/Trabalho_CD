@@ -1,3 +1,6 @@
+// O código possui a partir da linha 409 a instrução para execução de testes de verificação de corretude dos algoritmos.
+// Basta comentar o código principal nas partes demarcadas e descomentar o código dos testes.
+
 import java.util.Random;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,8 +15,10 @@ public class Main {
     int[] entradas = {1000, 10000, 100000, 1000000};
 
 
-    System.out.println("\n\n Iniciando execução");
+    System.out.println("\n Iniciando execução");
 
+    //Comentar aqui para realização de testes
+/*
     try (PrintWriter arquivo = new PrintWriter(new FileWriter("resultados.csv"))) {
 
       arquivo.println("Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status");
@@ -402,122 +407,189 @@ public class Main {
 
     }
 
+    */// Terminar o comentário aqui para execução dos testes
+
+  // TESTES DE REFERÊNCIA PARA O ARQUIVO
+
+
+
+    try (PrintWriter testes = new PrintWriter(new FileWriter("testes.txt"))) {
+
+      String[] nomesOrdens = {
+        "Aleatorio",
+        "Crescente",
+        "Decrescente",
+        "Valores repetidos"
+      };
+
+      testes.println("---- TESTES ----\n");
+
+      // QuickSort
+      testes.println("QuickSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          Integer[] vetor = gerarVetorComparable(10, ordem);
+          Integer[] original = Arrays.copyOf(vetor, vetor.length);
+
+          QuickSort.quickSort(vetor, 0, vetor.length - 1);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      // BubbleSort
+      testes.println("\n\nBubbleSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          Integer[] vetor = gerarVetorComparable(10, ordem);
+          Integer[] original = Arrays.copyOf(vetor, vetor.length);
+
+          BubbleSort.bubbleSort(vetor, vetor.length);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      // CountingSort
+      testes.println("\n\nCountingSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          int[] vetor = gerarVetorInteiroCounting(10, ordem);
+          int[] original = Arrays.copyOf(vetor, vetor.length);
+
+          CountingSort.countingSort(vetor, vetor.length);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      // RadixSort
+      testes.println("\n\nRadixSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          int[] vetor = gerarVetorInteiro(10, ordem);
+          int[] original = Arrays.copyOf(vetor, vetor.length);
+
+          RadixSort.radixSort(vetor, vetor.length);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      // HeapSort
+      testes.println("\n\nHeapSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          Integer[] vetor = gerarVetorComparable(10, ordem);
+          Integer[] original = Arrays.copyOf(vetor, vetor.length);
+
+          HeapSort.heapSort(vetor, vetor.length);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      // InsertionSort
+      testes.println("\n\nInsertionSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          Integer[] vetor = gerarVetorComparable(10, ordem);
+          Integer[] original = Arrays.copyOf(vetor, vetor.length);
+
+          InsertionSort.insertionSort(vetor, vetor.length);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      // SelectionSort
+      testes.println("\n\nSelectionSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          Integer[] vetor = gerarVetorComparable(10, ordem);
+          Integer[] original = Arrays.copyOf(vetor, vetor.length);
+
+          SelectionSort.selectionSort(vetor, vetor.length);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      // ShellSort
+      testes.println("\n\nShellSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          Integer[] vetor = gerarVetorComparable(10, ordem);
+          Integer[] original = Arrays.copyOf(vetor, vetor.length);
+
+          ShellSort.shellSort(vetor, vetor.length);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      // BucketSort
+      testes.println("\n\nBucketSort:");
+
+      for (int ordem = 0; ordem < 4; ordem++) {
+        testes.println("\n" + nomesOrdens[ordem] + ":");
+
+        for (int i = 0; i < 3; i++) {
+          double[] vetor = gerarVetorDouble(10, ordem);
+          double[] original = Arrays.copyOf(vetor, vetor.length);
+
+          BucketSort.bucketSort(vetor, vetor.length);
+
+          testes.println("Vetor original: " + Arrays.toString(original));
+          testes.println("Ordenado: " + Arrays.toString(vetor));
+        }
+      }
+
+      testes.close();
+
+      System.out.println("\n\n Testes executados e salvos no arquivo testes.txt\n ");
+    }
+
+    catch (IOException e) {
+
+      System.out.println("Erro ao escrever o arquivo: " + e.getMessage());
+
+    }
   }
+  /* FIM DOS TESTES */
 
-/*
-    testes
-
-    Integer X[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
-    12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-
-    Integer XX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
-    12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-    int tamanho = XX.length;
-
-    QuickSort.quickSort(XX, 0, tamanho - 1);
-    System.out.println("\n\nQuickSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XX[i]);
-    }
-
-
-    Integer XXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
-    12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-    tamanho = XXX.length;
-
-    BubbleSort.bubbleSort(XXX, tamanho);
-    System.out.println("\n\nBubbleSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XXX[i]);
-    }
-
-
-    int XXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65, 12,
-    89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-    tamanho = XXXX.length;
-
-    CountingSort.countingSort(XXXX, tamanho);
-    System.out.println("\n\nCountingSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XXXX[i]);
-    }
-
-
-    int XXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12, 65,
-    12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-    tamanho = XXXXX.length;
-
-    RadixSort.radixSort(XXXXX, tamanho);
-    System.out.println("\n\nRadixSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XXXXX[i]);
-    }
-
-
-    Integer XXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
-    65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-    tamanho = XXXXXX.length;
-
-    HeapSort.heapSort(XXXXXX, tamanho);
-    System.out.println("\n\nHeapSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XXXXXX[i]);
-    }
-
-
-    Integer XXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
-    65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-    tamanho = XXXXXXX.length;
-
-    InsertionSort.insertionSort(XXXXXXX, tamanho);
-    System.out.println("\n\nInsertionSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XXXXXXX[i]);
-    }
-
-
-    Integer XXXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87, 12,
-    65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-    tamanho = XXXXXXXX.length;
-
-    SelectionSort.selectionSort(XXXXXXXX, tamanho);
-    System.out.println("\n\nSelectionSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XXXXXXXX[i]);
-    }
-
-
-    Integer XXXXXXXXX[] = { 0, 2, 4, 7, 8, 1, 3, 5, 6, 12, 65, 34, 34, 32, 87,
-    12, 65, 12, 89, 23, 45, 3, 9, 23, 767, 123, 341, 143, 67 };
-    tamanho = XXXXXXXXX.length;
-
-    ShellSort.shellSort(XXXXXXXXX, tamanho);
-    System.out.println("\n\nShellSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XXXXXXXXX[i]);
-    }
-
-
-    double[] XXXXXXXXXX = gerarVetorDouble(20, 0);
-    tamanho = XXXXXXXXXX.length;
-
-    BucketSort.bucketSort(XXXXXXXXXX, tamanho);
-    System.out.println("\n\nBucketSort");
-
-    for (int i = 0; i < tamanho; i++) {
-    System.out.println(XXXXXXXXXX[i]);
-    }
-
-    }
-   */
 
   private static Integer[] gerarVetorComparable(int n, int ordem) {
 
@@ -549,9 +621,24 @@ public class Main {
 
     }
 
+    else if (ordem == 3) {
+
+      Integer[] valores = new Integer[5];
+
+      for (int i = 0; i < 5; i++) {
+        valores[i] = gerador.nextInt();
+      }
+
+      for (int i = 0; i < n; i++) {
+        vetor[i] = valores[gerador.nextInt(5)];
+      }
+
+    }
+
     return vetor;
 
   }
+
 
   private static int[] gerarVetorInteiro(int n, int ordem) {
 
@@ -583,9 +670,24 @@ public class Main {
 
     }
 
+    else if (ordem == 3) {
+
+      int[] valores = new int[5];
+
+      for (int i = 0; i < 5; i++) {
+        valores[i] = gerador.nextInt(Integer.MAX_VALUE);
+      }
+
+      for (int i = 0; i < n; i++) {
+        vetor[i] = valores[gerador.nextInt(5)];
+      }
+
+    }
+
     return vetor;
 
   }
+
 
   private static int[] gerarVetorInteiroCounting(int n, int ordem) {
 
@@ -604,7 +706,7 @@ public class Main {
     else if (ordem == 1) {
 
       for (int i = 0; i < n; i++) {
-        vetor[i] = (int) ((long) i  10000 / n);
+        vetor[i] = (int) ((long) i * 10000 / n);
       }
 
     }
@@ -612,7 +714,21 @@ public class Main {
     else if (ordem == 2) {
 
       for (int i = 0; i < n; i++) {
-        vetor[i] = (int) ((long) (n - 1 - i)  10000 / n);
+        vetor[i] = (int) ((long) (n - 1 - i) * 10000 / n);
+      }
+
+    }
+
+    else if (ordem == 3) {
+
+      int[] valores = new int[5];
+
+      for (int i = 0; i < 5; i++) {
+        valores[i] = gerador.nextInt(1000);
+      }
+
+      for (int i = 0; i < n; i++) {
+        vetor[i] = valores[gerador.nextInt(5)];
       }
 
     }
@@ -620,6 +736,7 @@ public class Main {
     return vetor;
 
   }
+
 
   private static double[] gerarVetorDouble(int n, int ordem) {
 
@@ -647,6 +764,20 @@ public class Main {
 
       for (int i = 0; i < n; i++) {
         vetor[i] = (double) (n - 1 - i) / n;
+      }
+
+    }
+
+    else if (ordem == 3) {
+
+      double[] valores = new double[5];
+
+      for (int i = 0; i < 5; i++) {
+        valores[i] = gerador.nextDouble();
+      }
+
+      for (int i = 0; i < n; i++) {
+        vetor[i] = valores[gerador.nextInt(5)];
       }
 
     }
