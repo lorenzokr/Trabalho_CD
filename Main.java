@@ -18,7 +18,7 @@ public class Main {
     System.out.println("\n Iniciando execução");
 
     //Comentar aqui para realização de testes
-/*
+
     try (PrintWriter arquivo = new PrintWriter(new FileWriter("resultados.csv"))) {
 
       arquivo.println("Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status");
@@ -105,9 +105,9 @@ public class Main {
 
             System.out.println("\nConfiguração: " + nomeOrdem);
 
-            // -=-=-=-=-=-=-=-=- BUBBLE SORT -=-=-=-=-=-=-=-=-=-
-
             vetorOriginal = gerarVetorComparable(entrada, ordem);
+
+            // -=-=-=-=-=-=-=-=- BUBBLE SORT -=-=-=-=-=-=-=-=-=-
 
             try {
 
@@ -407,9 +407,9 @@ public class Main {
 
     }
 
-    */// Terminar o comentário aqui para execução dos testes
+    // Terminar o comentário aqui para execução dos testes
 
-  // TESTES DE REFERÊNCIA PARA O ARQUIVO
+  /* TESTES DE REFERÊNCIA PARA O ARQUIVO
 
 
 

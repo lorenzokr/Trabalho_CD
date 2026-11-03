@@ -5,7 +5,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 1,MergeSort,1000,Aleatorio,950269,OK
 1,QuickSort,1000,Aleatorio,586795,OK
 1,SelectionSort,1000,Aleatorio,13021096,OK
-1,ShellSort,1000,Aleatorio,697584,OK
+1,ShellSort,1000,Aleatorio,921968,OK
 1,CountingSort,1000,Aleatorio,141436,OK
 1,RadixSort,1000,Aleatorio,1061929,OK
 1,BucketSort,1000,Aleatorio,1225838,OK
@@ -15,7 +15,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 1,MergeSort,10000,Aleatorio,3236313,OK
 1,QuickSort,10000,Aleatorio,1529550,OK
 1,SelectionSort,10000,Aleatorio,280114259,OK
-1,ShellSort,10000,Aleatorio,5172599,OK
+1,ShellSort,10000,Aleatorio,4030786,OK
 1,CountingSort,10000,Aleatorio,985485,OK
 1,RadixSort,10000,Aleatorio,2810552,OK
 1,BucketSort,10000,Aleatorio,3203812,OK
@@ -25,7 +25,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 1,MergeSort,100000,Aleatorio,84934078,OK
 1,QuickSort,100000,Aleatorio,62214527,OK
 1,SelectionSort,100000,Aleatorio,37066770947,OK
-1,ShellSort,100000,Aleatorio,49051257,OK
+1,ShellSort,100000,Aleatorio,37240758,OK
 1,CountingSort,100000,Aleatorio,2566493,OK
 1,RadixSort,100000,Aleatorio,5868751,OK
 1,BucketSort,100000,Aleatorio,25720042,OK
@@ -35,7 +35,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 1,MergeSort,1000000,Aleatorio,253725097,OK
 1,QuickSort,1000000,Aleatorio,231680363,OK
 1,SelectionSort,1000000,Aleatorio,6014261481572,OK
-1,ShellSort,1000000,Aleatorio,558876645,OK
+1,ShellSort,1000000,Aleatorio,698202923,OK
 1,CountingSort,1000000,Aleatorio,21257762,OK
 1,RadixSort,1000000,Aleatorio,66983097,OK
 1,BucketSort,1000000,Aleatorio,227539619,OK
@@ -45,7 +45,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 1,MergeSort,1000000,Crescente,109270799,OK
 1,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 1,SelectionSort,1000000,Crescente,3391403090653,OK
-1,ShellSort,1000000,Crescente,48588304,OK
+1,ShellSort,1000000,Crescente,45427111,OK
 1,CountingSort,1000000,Crescente,3399921,OK
 1,RadixSort,1000000,Crescente,24538012,OK
 1,BucketSort,1000000,Crescente,62511940,OK
@@ -55,7 +55,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 1,MergeSort,1000000,Decrescente,114895620,OK
 1,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 1,SelectionSort,1000000,Decrescente,3298433804877,OK
-1,ShellSort,1000000,Decrescente,71551943,OK
+1,ShellSort,1000000,Decrescente,73453234,OK
 1,CountingSort,1000000,Decrescente,4853204,OK
 1,RadixSort,1000000,Decrescente,33643690,OK
 1,BucketSort,1000000,Decrescente,23982867,OK
@@ -65,7 +65,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 2,MergeSort,1000,Aleatorio,106050,OK
 2,QuickSort,1000,Aleatorio,86363,OK
 2,SelectionSort,1000,Aleatorio,2560680,OK
-2,ShellSort,1000,Aleatorio,76224,OK
+2,ShellSort,1000,Aleatorio,86049,OK
 2,CountingSort,1000,Aleatorio,7484,OK
 2,RadixSort,1000,Aleatorio,86844,OK
 2,BucketSort,1000,Aleatorio,71495,OK
@@ -75,7 +75,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 2,MergeSort,10000,Aleatorio,1362811,OK
 2,QuickSort,10000,Aleatorio,813024,OK
 2,SelectionSort,10000,Aleatorio,298729913,OK
-2,ShellSort,10000,Aleatorio,1233747,OK
+2,ShellSort,10000,Aleatorio,1321108,OK
 2,CountingSort,10000,Aleatorio,51066,OK
 2,RadixSort,10000,Aleatorio,702314,OK
 2,BucketSort,10000,Aleatorio,806411,OK
@@ -85,7 +85,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 2,MergeSort,100000,Aleatorio,35418738,OK
 2,QuickSort,100000,Aleatorio,12398205,OK
 2,SelectionSort,100000,Aleatorio,40696571729,OK
-2,ShellSort,100000,Aleatorio,24276731,OK
+2,ShellSort,100000,Aleatorio,27895440,OK
 2,CountingSort,100000,Aleatorio,397450,OK
 2,RadixSort,100000,Aleatorio,4974162,OK
 2,BucketSort,100000,Aleatorio,9815704,OK
@@ -95,7 +95,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 2,MergeSort,1000000,Aleatorio,196255448,OK
 2,QuickSort,1000000,Aleatorio,196556454,OK
 2,SelectionSort,1000000,Aleatorio,6265924373171,OK
-2,ShellSort,1000000,Aleatorio,583485435,OK
+2,ShellSort,1000000,Aleatorio,656595313,OK
 2,CountingSort,1000000,Aleatorio,4866719,OK
 2,RadixSort,1000000,Aleatorio,69036040,OK
 2,BucketSort,1000000,Aleatorio,180047239,OK
@@ -105,7 +105,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 2,MergeSort,1000000,Crescente,120773791,OK
 2,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 2,SelectionSort,1000000,Crescente,3391478167559,OK
-2,ShellSort,1000000,Crescente,45889627,OK
+2,ShellSort,1000000,Crescente,45152425,OK
 2,CountingSort,1000000,Crescente,4992476,OK
 2,RadixSort,1000000,Crescente,97889306,OK
 2,BucketSort,1000000,Crescente,20309802,OK
@@ -115,7 +115,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 2,MergeSort,1000000,Decrescente,88721621,OK
 2,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 2,SelectionSort,1000000,Decrescente,3278661109371,OK
-2,ShellSort,1000000,Decrescente,72068721,OK
+2,ShellSort,1000000,Decrescente,72891886,OK
 2,CountingSort,1000000,Decrescente,4544470,OK
 2,RadixSort,1000000,Decrescente,24640946,OK
 2,BucketSort,1000000,Decrescente,35904947,OK
@@ -125,7 +125,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 3,MergeSort,1000,Aleatorio,69591,OK
 3,QuickSort,1000,Aleatorio,57177,OK
 3,SelectionSort,1000,Aleatorio,2553946,OK
-3,ShellSort,1000,Aleatorio,77366,OK
+3,ShellSort,1000,Aleatorio,80730,OK
 3,CountingSort,1000,Aleatorio,4508,OK
 3,RadixSort,1000,Aleatorio,49253,OK
 3,BucketSort,1000,Aleatorio,32672,OK
@@ -135,7 +135,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 3,MergeSort,10000,Aleatorio,921117,OK
 3,QuickSort,10000,Aleatorio,828231,OK
 3,SelectionSort,10000,Aleatorio,296208485,OK
-3,ShellSort,10000,Aleatorio,1266699,OK
+3,ShellSort,10000,Aleatorio,1241209,OK
 3,CountingSort,10000,Aleatorio,44564,OK
 3,RadixSort,10000,Aleatorio,575806,OK
 3,BucketSort,10000,Aleatorio,418930,OK
@@ -145,7 +145,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 3,MergeSort,100000,Aleatorio,11190502,OK
 3,QuickSort,100000,Aleatorio,11306751,OK
 3,SelectionSort,100000,Aleatorio,40381270752,OK
-3,ShellSort,100000,Aleatorio,22911706,OK
+3,ShellSort,100000,Aleatorio,24400346,OK
 3,CountingSort,100000,Aleatorio,408911,OK
 3,RadixSort,100000,Aleatorio,5154530,OK
 3,BucketSort,100000,Aleatorio,5416524,OK
@@ -155,7 +155,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 3,MergeSort,1000000,Aleatorio,233291116,OK
 3,QuickSort,1000000,Aleatorio,213572498,OK
 3,SelectionSort,1000000,Aleatorio,6108623245452,OK
-3,ShellSort,1000000,Aleatorio,535113087,OK
+3,ShellSort,1000000,Aleatorio,662278965,OK
 3,CountingSort,1000000,Aleatorio,5015649,OK
 3,RadixSort,1000000,Aleatorio,48749768,OK
 3,BucketSort,1000000,Aleatorio,154177515,OK
@@ -165,7 +165,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 3,MergeSort,1000000,Crescente,147331905,OK
 3,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 3,SelectionSort,1000000,Crescente,3398407192157,OK
-3,ShellSort,1000000,Crescente,49334427,OK
+3,ShellSort,1000000,Crescente,45789447,OK
 3,CountingSort,1000000,Crescente,4343946,OK
 3,RadixSort,1000000,Crescente,24351093,OK
 3,BucketSort,1000000,Crescente,23358335,OK
@@ -175,7 +175,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 3,MergeSort,1000000,Decrescente,152651958,OK
 3,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 3,SelectionSort,1000000,Decrescente,3291675744022,OK
-3,ShellSort,1000000,Decrescente,72608098,OK
+3,ShellSort,1000000,Decrescente,73224155,OK
 3,CountingSort,1000000,Decrescente,4117665,OK
 3,RadixSort,1000000,Decrescente,24076401,OK
 3,BucketSort,1000000,Decrescente,22638305,OK
@@ -185,7 +185,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 4,MergeSort,1000,Aleatorio,81314,OK
 4,QuickSort,1000,Aleatorio,60083,OK
 4,SelectionSort,1000,Aleatorio,2600901,OK
-4,ShellSort,1000,Aleatorio,81083,OK
+4,ShellSort,1000,Aleatorio,82903,OK
 4,CountingSort,1000,Aleatorio,5260,OK
 4,RadixSort,1000,Aleatorio,50736,OK
 4,BucketSort,1000,Aleatorio,34105,OK
@@ -195,7 +195,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 4,MergeSort,10000,Aleatorio,934936,OK
 4,QuickSort,10000,Aleatorio,864171,OK
 4,SelectionSort,10000,Aleatorio,312155767,OK
-4,ShellSort,10000,Aleatorio,1289695,OK
+4,ShellSort,10000,Aleatorio,1369407,OK
 4,CountingSort,10000,Aleatorio,44484,OK
 4,RadixSort,10000,Aleatorio,550149,OK
 4,BucketSort,10000,Aleatorio,1540258,OK
@@ -205,7 +205,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 4,MergeSort,100000,Aleatorio,11548419,OK
 4,QuickSort,100000,Aleatorio,12375049,OK
 4,SelectionSort,100000,Aleatorio,41449373865,OK
-4,ShellSort,100000,Aleatorio,23523286,OK
+4,ShellSort,100000,Aleatorio,24337902,OK
 4,CountingSort,100000,Aleatorio,670064,OK
 4,RadixSort,100000,Aleatorio,5256283,OK
 4,BucketSort,100000,Aleatorio,13232417,OK
@@ -215,7 +215,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 4,MergeSort,1000000,Aleatorio,222839613,OK
 4,QuickSort,1000000,Aleatorio,187972109,OK
 4,SelectionSort,1000000,Aleatorio,5161019955058,OK
-4,ShellSort,1000000,Aleatorio,508008857,OK
+4,ShellSort,1000000,Aleatorio,654106276,OK
 4,CountingSort,1000000,Aleatorio,4618577,OK
 4,RadixSort,1000000,Aleatorio,48008293,OK
 4,BucketSort,1000000,Aleatorio,175927743,OK
@@ -225,7 +225,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 4,MergeSort,1000000,Crescente,106884540,OK
 4,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 4,SelectionSort,1000000,Crescente,3387532945729,OK
-4,ShellSort,1000000,Crescente,48132792,OK
+4,ShellSort,1000000,Crescente,45565124,OK
 4,CountingSort,1000000,Crescente,3879550,OK
 4,RadixSort,1000000,Crescente,24619489,OK
 4,BucketSort,1000000,Crescente,50346968,OK
@@ -235,7 +235,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 4,MergeSort,1000000,Decrescente,159097100,OK
 4,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 4,SelectionSort,1000000,Decrescente,3280223684031,OK
-4,ShellSort,1000000,Decrescente,72253431,OK
+4,ShellSort,1000000,Decrescente,71886802,OK
 4,CountingSort,1000000,Decrescente,4224604,OK
 4,RadixSort,1000000,Decrescente,24623229,OK
 4,BucketSort,1000000,Decrescente,21422986,OK
@@ -245,7 +245,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 5,MergeSort,1000,Aleatorio,69571,OK
 5,QuickSort,1000,Aleatorio,60524,OK
 5,SelectionSort,1000,Aleatorio,2616613,OK
-5,ShellSort,1000,Aleatorio,79269,OK
+5,ShellSort,1000,Aleatorio,85629,OK
 5,CountingSort,1000,Aleatorio,6051,OK
 5,RadixSort,1000,Aleatorio,54343,OK
 5,BucketSort,1000,Aleatorio,37430,OK
@@ -255,7 +255,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 5,MergeSort,10000,Aleatorio,903984,OK
 5,QuickSort,10000,Aleatorio,883165,OK
 5,SelectionSort,10000,Aleatorio,312536827,OK
-5,ShellSort,10000,Aleatorio,1315140,OK
+5,ShellSort,10000,Aleatorio,1293897,OK
 5,CountingSort,10000,Aleatorio,43362,OK
 5,RadixSort,10000,Aleatorio,540859,OK
 5,BucketSort,10000,Aleatorio,481317,OK
@@ -265,7 +265,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 5,MergeSort,100000,Aleatorio,11344376,OK
 5,QuickSort,100000,Aleatorio,11400793,OK
 5,SelectionSort,100000,Aleatorio,40350440493,OK
-5,ShellSort,100000,Aleatorio,23325904,OK
+5,ShellSort,100000,Aleatorio,28579981,OK
 5,CountingSort,100000,Aleatorio,382401,OK
 5,RadixSort,100000,Aleatorio,5380694,OK
 5,BucketSort,100000,Aleatorio,12747091,OK
@@ -275,7 +275,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 5,MergeSort,1000000,Aleatorio,214536908,OK
 5,QuickSort,1000000,Aleatorio,201911954,OK
 5,SelectionSort,1000000,Aleatorio,6689255415740,OK
-5,ShellSort,1000000,Aleatorio,531710773,OK
+5,ShellSort,1000000,Aleatorio,666354694,OK
 5,CountingSort,1000000,Aleatorio,5107219,OK
 5,RadixSort,1000000,Aleatorio,48622685,OK
 5,BucketSort,1000000,Aleatorio,195617302,OK
@@ -285,7 +285,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 5,MergeSort,1000000,Crescente,137150326,OK
 5,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 5,SelectionSort,1000000,Crescente,3374432310719,OK
-5,ShellSort,1000000,Crescente,72870970,OK
+5,ShellSort,1000000,Crescente,45925454,OK
 5,CountingSort,1000000,Crescente,4172637,OK
 5,RadixSort,1000000,Crescente,28241656,OK
 5,BucketSort,1000000,Crescente,35126788,OK
@@ -295,7 +295,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 5,MergeSort,1000000,Decrescente,134854422,OK
 5,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 5,SelectionSort,1000000,Decrescente,3282061797654,OK
-5,ShellSort,1000000,Decrescente,70164458,OK
+5,ShellSort,1000000,Decrescente,74692974,OK
 5,CountingSort,1000000,Decrescente,4014973,OK
 5,RadixSort,1000000,Decrescente,24277132,OK
 5,BucketSort,1000000,Decrescente,30989590,OK
@@ -305,7 +305,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 6,MergeSort,1000,Aleatorio,78248,OK
 6,QuickSort,1000,Aleatorio,60565,OK
 6,SelectionSort,1000,Aleatorio,2583389,OK
-6,ShellSort,1000,Aleatorio,79961,OK
+6,ShellSort,1000,Aleatorio,82923,OK
 6,CountingSort,1000,Aleatorio,5350,OK
 6,RadixSort,1000,Aleatorio,50275,OK
 6,BucketSort,1000,Aleatorio,33534,OK
@@ -315,7 +315,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 6,MergeSort,10000,Aleatorio,1221176,OK
 6,QuickSort,10000,Aleatorio,854254,OK
 6,SelectionSort,10000,Aleatorio,312714418,OK
-6,ShellSort,10000,Aleatorio,1248768,OK
+6,ShellSort,10000,Aleatorio,1331156,OK
 6,CountingSort,10000,Aleatorio,50937,OK
 6,RadixSort,10000,Aleatorio,542785,OK
 6,BucketSort,10000,Aleatorio,1367603,OK
@@ -325,7 +325,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 6,MergeSort,100000,Aleatorio,11120201,OK
 6,QuickSort,100000,Aleatorio,11470112,OK
 6,SelectionSort,100000,Aleatorio,40437929677,OK
-6,ShellSort,100000,Aleatorio,23819811,OK
+6,ShellSort,100000,Aleatorio,31993095,OK
 6,CountingSort,100000,Aleatorio,384950,OK
 6,RadixSort,100000,Aleatorio,5333722,OK
 6,BucketSort,100000,Aleatorio,11981724,OK
@@ -335,7 +335,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 6,MergeSort,1000000,Aleatorio,217026150,OK
 6,QuickSort,1000000,Aleatorio,192236004,OK
 6,SelectionSort,1000000,Aleatorio,5395254436494,OK
-6,ShellSort,1000000,Aleatorio,529748487,OK
+6,ShellSort,1000000,Aleatorio,624227581,OK
 6,CountingSort,1000000,Aleatorio,4567541,OK
 6,RadixSort,1000000,Aleatorio,60055770,OK
 6,BucketSort,1000000,Aleatorio,195156084,OK
@@ -345,7 +345,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 6,MergeSort,1000000,Crescente,121553796,OK
 6,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 6,SelectionSort,1000000,Crescente,3387086109545,OK
-6,ShellSort,1000000,Crescente,47629487,OK
+6,ShellSort,1000000,Crescente,45721378,OK
 6,CountingSort,1000000,Crescente,4065226,OK
 6,RadixSort,1000000,Crescente,24799526,OK
 6,BucketSort,1000000,Crescente,85100617,OK
@@ -355,7 +355,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 6,MergeSort,1000000,Decrescente,102041149,OK
 6,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 6,SelectionSort,1000000,Decrescente,3279122880927,OK
-6,ShellSort,1000000,Decrescente,87649191,OK
+6,ShellSort,1000000,Decrescente,73962695,OK
 6,CountingSort,1000000,Decrescente,4442819,OK
 6,RadixSort,1000000,Decrescente,25564896,OK
 6,BucketSort,1000000,Decrescente,22638701,OK
@@ -365,7 +365,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 7,MergeSort,1000,Aleatorio,69232,OK
 7,QuickSort,1000,Aleatorio,58651,OK
 7,SelectionSort,1000,Aleatorio,2678253,OK
-7,ShellSort,1000,Aleatorio,81765,OK
+7,ShellSort,1000,Aleatorio,86049,OK
 7,CountingSort,1000,Aleatorio,4519,OK
 7,RadixSort,1000,Aleatorio,49695,OK
 7,BucketSort,1000,Aleatorio,33123,OK
@@ -375,7 +375,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 7,MergeSort,10000,Aleatorio,929056,OK
 7,QuickSort,10000,Aleatorio,839546,OK
 7,SelectionSort,10000,Aleatorio,308838295,OK
-7,ShellSort,10000,Aleatorio,1268081,OK
+7,ShellSort,10000,Aleatorio,1337177,OK
 7,CountingSort,10000,Aleatorio,43072,OK
 7,RadixSort,10000,Aleatorio,530879,OK
 7,BucketSort,10000,Aleatorio,1681568,OK
@@ -385,7 +385,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 7,MergeSort,100000,Aleatorio,42734301,OK
 7,QuickSort,100000,Aleatorio,12219238,OK
 7,SelectionSort,100000,Aleatorio,40606762372,OK
-7,ShellSort,100000,Aleatorio,24385300,OK
+7,ShellSort,100000,Aleatorio,32318660,OK
 7,CountingSort,100000,Aleatorio,336479,OK
 7,RadixSort,100000,Aleatorio,5068546,OK
 7,BucketSort,100000,Aleatorio,9398118,OK
@@ -395,7 +395,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 7,MergeSort,1000000,Aleatorio,192408687,OK
 7,QuickSort,1000000,Aleatorio,194972415,OK
 7,SelectionSort,1000000,Aleatorio,5613743264395,OK
-7,ShellSort,1000000,Aleatorio,483241740,OK
+7,ShellSort,1000000,Aleatorio,646199962,OK
 7,CountingSort,1000000,Aleatorio,4685325,OK
 7,RadixSort,1000000,Aleatorio,47561264,OK
 7,BucketSort,1000000,Aleatorio,169128328,OK
@@ -405,7 +405,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 7,MergeSort,1000000,Crescente,96887868,OK
 7,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 7,SelectionSort,1000000,Crescente,3380125876719,OK
-7,ShellSort,1000000,Crescente,47504479,OK
+7,ShellSort,1000000,Crescente,54666713,OK
 7,CountingSort,1000000,Crescente,4401616,OK
 7,RadixSort,1000000,Crescente,25267337,OK
 7,BucketSort,1000000,Crescente,57700472,OK
@@ -415,7 +415,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 7,MergeSort,1000000,Decrescente,117987922,OK
 7,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 7,SelectionSort,1000000,Decrescente,3275322400034,OK
-7,ShellSort,1000000,Decrescente,71637130,OK
+7,ShellSort,1000000,Decrescente,74119099,OK
 7,CountingSort,1000000,Decrescente,4333077,OK
 7,RadixSort,1000000,Decrescente,24217521,OK
 7,BucketSort,1000000,Decrescente,47993501,OK
@@ -425,7 +425,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 8,MergeSort,1000,Aleatorio,71935,OK
 8,QuickSort,1000,Aleatorio,58481,OK
 8,SelectionSort,1000,Aleatorio,2608466,OK
-8,ShellSort,1000,Aleatorio,78207,OK
+8,ShellSort,1000,Aleatorio,90908,OK
 8,CountingSort,1000,Aleatorio,6021,OK
 8,RadixSort,1000,Aleatorio,56135,OK
 8,BucketSort,1000,Aleatorio,38432,OK
@@ -435,7 +435,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 8,MergeSort,10000,Aleatorio,899525,OK
 8,QuickSort,10000,Aleatorio,838761,OK
 8,SelectionSort,10000,Aleatorio,300547902,OK
-8,ShellSort,10000,Aleatorio,1227363,OK
+8,ShellSort,10000,Aleatorio,1379525,OK
 8,CountingSort,10000,Aleatorio,45195,OK
 8,RadixSort,10000,Aleatorio,563351,OK
 8,BucketSort,10000,Aleatorio,1546695,OK
@@ -445,7 +445,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 8,MergeSort,100000,Aleatorio,26619438,OK
 8,QuickSort,100000,Aleatorio,13156305,OK
 8,SelectionSort,100000,Aleatorio,40918333153,OK
-8,ShellSort,100000,Aleatorio,24089010,OK
+8,ShellSort,100000,Aleatorio,25827226,OK
 8,CountingSort,100000,Aleatorio,409412,OK
 8,RadixSort,100000,Aleatorio,5034669,OK
 8,BucketSort,100000,Aleatorio,12862823,OK
@@ -455,7 +455,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 8,MergeSort,1000000,Aleatorio,245784275,OK
 8,QuickSort,1000000,Aleatorio,198150721,OK
 8,SelectionSort,1000000,Aleatorio,6684216595779,OK
-8,ShellSort,1000000,Aleatorio,528657280,OK
+8,ShellSort,1000000,Aleatorio,643347902,OK
 8,CountingSort,1000000,Aleatorio,4617276,OK
 8,RadixSort,1000000,Aleatorio,49000309,OK
 8,BucketSort,1000000,Aleatorio,217620287,OK
@@ -465,7 +465,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 8,MergeSort,1000000,Crescente,122737494,OK
 8,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 8,SelectionSort,1000000,Crescente,3375134772959,OK
-8,ShellSort,1000000,Crescente,46464528,OK
+8,ShellSort,1000000,Crescente,48245598,OK
 8,CountingSort,1000000,Crescente,3988127,OK
 8,RadixSort,1000000,Crescente,35427863,OK
 8,BucketSort,1000000,Crescente,67716357,OK
@@ -475,7 +475,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 8,MergeSort,1000000,Decrescente,99014862,OK
 8,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 8,SelectionSort,1000000,Decrescente,3294944285170,OK
-8,ShellSort,1000000,Decrescente,73137392,OK
+8,ShellSort,1000000,Decrescente,80060749,OK
 8,CountingSort,1000000,Decrescente,4284878,OK
 8,RadixSort,1000000,Decrescente,24668232,OK
 8,BucketSort,1000000,Decrescente,22533147,OK
@@ -485,7 +485,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 9,MergeSort,1000,Aleatorio,66320,OK
 9,QuickSort,1000,Aleatorio,56963,OK
 9,SelectionSort,1000,Aleatorio,2537928,OK
-9,ShellSort,1000,Aleatorio,77751,OK
+9,ShellSort,1000,Aleatorio,95026,OK
 9,CountingSort,1000,Aleatorio,4428,OK
 9,RadixSort,1000,Aleatorio,51033,OK
 9,BucketSort,1000,Aleatorio,32348,OK
@@ -495,7 +495,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 9,MergeSort,10000,Aleatorio,930018,OK
 9,QuickSort,10000,Aleatorio,858759,OK
 9,SelectionSort,10000,Aleatorio,310618890,OK
-9,ShellSort,10000,Aleatorio,1232828,OK
+9,ShellSort,10000,Aleatorio,1394674,OK
 9,CountingSort,10000,Aleatorio,59799,OK
 9,RadixSort,10000,Aleatorio,622059,OK
 9,BucketSort,10000,Aleatorio,1357204,OK
@@ -505,7 +505,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 9,MergeSort,100000,Aleatorio,11609197,OK
 9,QuickSort,100000,Aleatorio,11188921,OK
 9,SelectionSort,100000,Aleatorio,40552038538,OK
-9,ShellSort,100000,Aleatorio,23889065,OK
+9,ShellSort,100000,Aleatorio,26752201,OK
 9,CountingSort,100000,Aleatorio,346703,OK
 9,RadixSort,100000,Aleatorio,5125709,OK
 9,BucketSort,100000,Aleatorio,8260452,OK
@@ -515,7 +515,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 9,MergeSort,1000000,Aleatorio,254735095,OK
 9,QuickSort,1000000,Aleatorio,206595945,OK
 9,SelectionSort,1000000,Aleatorio,6447502018126,OK
-9,ShellSort,1000000,Aleatorio,575898347,OK
+9,ShellSort,1000000,Aleatorio,663343542,OK
 9,CountingSort,1000000,Aleatorio,4333309,OK
 9,RadixSort,1000000,Aleatorio,49666850,OK
 9,BucketSort,1000000,Aleatorio,154979280,OK
@@ -525,7 +525,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 9,MergeSort,1000000,Crescente,154578464,OK
 9,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 9,SelectionSort,1000000,Crescente,3407804503627,OK
-9,ShellSort,1000000,Crescente,48187654,OK
+9,ShellSort,1000000,Crescente,46999461,OK
 9,CountingSort,1000000,Crescente,4725542,OK
 9,RadixSort,1000000,Crescente,24944386,OK
 9,BucketSort,1000000,Crescente,22005854,OK
@@ -535,7 +535,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 9,MergeSort,1000000,Decrescente,142123893,OK
 9,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 9,SelectionSort,1000000,Decrescente,3284446968701,OK
-9,ShellSort,1000000,Decrescente,71215399,OK
+9,ShellSort,1000000,Decrescente,74080362,OK
 9,CountingSort,1000000,Decrescente,4435532,OK
 9,RadixSort,1000000,Decrescente,24705340,OK
 9,BucketSort,1000000,Decrescente,21663883,OK
@@ -545,7 +545,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 10,MergeSort,1000,Aleatorio,745392,OK
 10,QuickSort,1000,Aleatorio,439447,OK
 10,SelectionSort,1000,Aleatorio,9865213,OK
-10,ShellSort,1000,Aleatorio,637138,OK
+10,ShellSort,1000,Aleatorio,133096,OK
 10,CountingSort,1000,Aleatorio,128652,OK
 10,RadixSort,1000,Aleatorio,945899,OK
 10,BucketSort,1000,Aleatorio,1063009,OK
@@ -555,7 +555,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 10,MergeSort,10000,Aleatorio,5101404,OK
 10,QuickSort,10000,Aleatorio,1756513,OK
 10,SelectionSort,10000,Aleatorio,269345525,OK
-10,ShellSort,10000,Aleatorio,4738472,OK
+10,ShellSort,10000,Aleatorio,1333601,OK
 10,CountingSort,10000,Aleatorio,911705,OK
 10,RadixSort,10000,Aleatorio,2762175,OK
 10,BucketSort,10000,Aleatorio,3594861,OK
@@ -565,7 +565,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 10,MergeSort,100000,Aleatorio,88399391,OK
 10,QuickSort,100000,Aleatorio,75868916,OK
 10,SelectionSort,100000,Aleatorio,34191720048,OK
-10,ShellSort,100000,Aleatorio,36606085,OK
+10,ShellSort,100000,Aleatorio,27526486,OK
 10,CountingSort,100000,Aleatorio,2452632,OK
 10,RadixSort,100000,Aleatorio,9218356,OK
 10,BucketSort,100000,Aleatorio,30081454,OK
@@ -575,7 +575,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 10,MergeSort,1000000,Aleatorio,240778189,OK
 10,QuickSort,1000000,Aleatorio,205714802,OK
 10,SelectionSort,1000000,Aleatorio,4945604923482,OK
-10,ShellSort,1000000,Aleatorio,488933406,OK
+10,ShellSort,1000000,Aleatorio,667813058,OK
 10,CountingSort,1000000,Aleatorio,7176993,OK
 10,RadixSort,1000000,Aleatorio,67287298,OK
 10,BucketSort,1000000,Aleatorio,208936356,OK
@@ -585,7 +585,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 10,MergeSort,1000000,Crescente,121662563,OK
 10,QuickSort,1000000,Crescente,-1,STACK_OVERFLOW
 10,SelectionSort,1000000,Crescente,3339198103305,OK
-10,ShellSort,1000000,Crescente,48483652,OK
+10,ShellSort,1000000,Crescente,46149739,OK
 10,CountingSort,1000000,Crescente,3406613,OK
 10,RadixSort,1000000,Crescente,24606218,OK
 10,BucketSort,1000000,Crescente,57356242,OK
@@ -595,7 +595,7 @@ Rodada,Algoritmo,Tamanho,Ordem,Tempo_ns,Status
 10,MergeSort,1000000,Decrescente,114406982,OK
 10,QuickSort,1000000,Decrescente,-1,STACK_OVERFLOW
 10,SelectionSort,1000000,Decrescente,3342179024782,OK
-10,ShellSort,1000000,Decrescente,72926676,OK
+10,ShellSort,1000000,Decrescente,74285486,OK
 10,CountingSort,1000000,Decrescente,5254024,OK
 10,RadixSort,1000000,Decrescente,34131578,OK
 10,BucketSort,1000000,Decrescente,44882804,OK
